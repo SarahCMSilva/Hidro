@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulclaro"
+    tools:context=".MainActivity2">
+
+    <!-- Cabeçalho com botão de voltar -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="16dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_circle_left_24"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preencher Dados"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+    <!-- Conteúdo centralizado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity2">
+
+        <!-- Campo Nome de Usuário -->
+        <TextView
+            android:id="@+id/username_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome de usuário:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:hint="Digite seu nome de usuário"
+            android:padding="15dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo Email -->
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:hint="Digite seu email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo Senha -->
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Senha:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:hint="Digite sua senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo Confirmar Senha -->
+        <TextView
+            android:id="@+id/confirm_password_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar senha:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:hint="Confirme sua senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão Cadastrar -->
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#89D4FF"
+            android:padding="15dp"
+            android:text="CADASTRAR"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
