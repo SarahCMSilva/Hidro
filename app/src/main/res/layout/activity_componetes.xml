@@ -68,7 +68,7 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:background="@drawable/ic_arredindado"
+                    android:background="@drawable/ic_arredondado"
                     android:src="@drawable/cloro"
                     android:padding="5dp"
                     android:layout_marginEnd="10dp" />
