@@ -3,6 +3,7 @@ package com.example.hidrotech;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -31,10 +32,23 @@ public class Medidas extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent para navegar para a página desejada (MainActivity, por exemplo)
+                // Intent para navegar para a MainActivity
                 Intent intent = new Intent(Medidas.this, MainActivity.class);
-                startActivity(intent); // Inicia a nova Activity
+                startActivity(intent);
+                finish(); // Finaliza a Activity atual para limpar a pilha
+            }
+        });
+
+        // Configurar o botão de confirmação para navegar para Componetes
+        Button btnConfirm = findViewById(R.id.btn_confirm); // ID do botão de confirmação
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Intent para navegar para Componetes
+                Intent intentToComponetes = new Intent(Medidas.this, Componetes.class);
+                startActivity(intentToComponetes);
+                finish(); // Finaliza a Activity atual após a navegação
             }
         });
     }
-    }
+}

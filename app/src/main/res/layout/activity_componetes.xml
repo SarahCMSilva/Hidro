@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azulclaro"
-    tools:context=".Componentes">
+    tools:context=".Componetes">
 
     <!-- Cabeçalho com botão de voltar -->
     <LinearLayout
@@ -54,94 +54,74 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Componente Cloro -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@drawable/card_background"
+                android:background="@drawable/input"
                 android:padding="10dp"
                 android:layout_marginBottom="10dp">
+
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_cloro" />
+                    android:background="@drawable/ic_arredindado"
+                    android:src="@drawable/cloro"
+                    android:padding="5dp"
+                    android:layout_marginEnd="10dp" />
+
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingStart="16dp">
+                    android:orientation="vertical">
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cloro"
+                        android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textColor="@color/black" />
+                        android:fontFamily="sans-serif-medium"/>
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Última aplicação: 10/10/2024"
-                        android:textSize="14sp"
-                        android:textColor="@color/grey" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
                 </LinearLayout>
 
-                <Switch
-                    android:id="@+id/switch_cloro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
-            </LinearLayout>
-
-            <!-- Componente Clarificante -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@drawable/card_background"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_clarificante" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Clarificante"
-                        android:textSize="16sp"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Última aplicação: 10/10/2024"
-                        android:textSize="14sp"
-                        android:textColor="@color/grey" />
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/switch_clarificante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="false" />
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <Switch
+                        android:id="@+id/switch_cloro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUTOMÁTICO"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Adicione os outros componentes da mesma maneira -->
-            <!-- Algicida, Elevador de pH, Redutor de pH -->
+
 
         </LinearLayout>
     </ScrollView>
